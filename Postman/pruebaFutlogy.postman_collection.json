@@ -1,0 +1,874 @@
+{
+	"info": {
+		"_postman_id": "32a99147-dca8-45f7-9c69-068c5507f977",
+		"name": "pruebaFutlogy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inventario",
+			"item": [
+				{
+					"name": "Empresa",
+					"item": [
+						{
+							"name": "01 Lista Empresas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/empresas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"empresas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Empresa por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Empresas/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Empresas",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nueva Empresa",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Nombre\":\"El Gran Tito2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Empresas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Empresas"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Empresa",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Id\":5,\r\n  \"Nombre\":\"El Gran Tito 1.0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Empresas/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Empresas",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Empresa",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Empresas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Empresas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Area",
+					"item": [
+						{
+							"name": "01 Lista Areas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Areas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Areas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Area por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Areas/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Areas",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nueva Area",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empresa\": 5,\r\n    \"nombre\": \"Corte\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Areas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Areas"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Area",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"id\": 5,\r\n        \"empresa\": 5,\r\n        \"nombre\": \"Recorte\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Areas/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Areas",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Area",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Areas/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Areas",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Persona",
+					"item": [
+						{
+							"name": "01 Lista Personas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Personas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Persona por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Personas/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Personas",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nueva Persona",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empresa\": 5,\r\n    \"nombre\": \"Camilo Jose Martinez\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Personas"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Persona",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"id\": 4,\r\n        \"empresa\": 5,\r\n        \"nombre\": \"Camilo Jose Martini\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Personas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Personas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Persona",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Personas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Personas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "PropietarioInventario",
+					"item": [
+						{
+							"name": "01 Lista Propietarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/PropietariosInventario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"PropietariosInventario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Propietario por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/PropietariosInventario/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"PropietariosInventario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nuevo Propietario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipo\": \"P\",\r\n    \"area\": null,\r\n    \"persona\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/PropietariosInventario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"PropietariosInventario"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Propietario",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"tipo\": \"P\",\r\n    \"area\": null,\r\n    \"persona\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/PropietariosInventario/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"PropietariosInventario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Propietario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/PropietariosInventario/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"PropietariosInventario",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "TipoInventario",
+					"item": [
+						{
+							"name": "01 Lista Tipos Inventario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/TiposInventario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"TiposInventario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Tipos Inventario por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/TiposInventario/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"TiposInventario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nuevo Tipo Inventario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Nombre\":\"Herramientas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/TiposInventario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"TiposInventario"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Tipo Inventario",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Id\":3,\r\n  \"Nombre\":\"Herramientas de Trabajo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/TiposInventario/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"TiposInventario",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Tipo Inventario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/TiposInventario/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"TiposInventario",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Inventario",
+					"item": [
+						{
+							"name": "01 Lista Inventarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Inventarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Inventarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Obtener Inventario por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Inventarios/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Inventarios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Nuevo Inventario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Cargador tipo C\",\r\n    \"descripcion\": \"Cargador Celular tipo C\",\r\n    \"tipoInventario\": 1,\r\n    \"serial\": \"CC123\",\r\n    \"valorCompra\": 25000,\r\n    \"fechaCompra\": \"2020-01-02T00:00:00\",\r\n    \"estadoActual\": \"Excelente\",\r\n    \"propietarioInventario\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Inventarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Inventarios"
+									]
+								},
+								"description": "prueba tecnica FutLogy nueva empresa"
+							},
+							"response": []
+						},
+						{
+							"name": "04 Actualizar Inventario",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Cargador tipo C\",\r\n    \"descripcion\": \"Cargador Celular tipo C\",\r\n    \"tipoInventario\": 1,\r\n    \"serial\": \"CC321\",\r\n    \"valorCompra\": 30000,\r\n    \"fechaCompra\": \"2020-01-02T00:00:00\",\r\n    \"estadoActual\": \"Excelente\",\r\n    \"propietarioInventario\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50623/api/Inventarios/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Inventarios",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Eliminar Inventario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:50623/api/Inventarios/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50623",
+									"path": [
+										"api",
+										"Inventarios",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
