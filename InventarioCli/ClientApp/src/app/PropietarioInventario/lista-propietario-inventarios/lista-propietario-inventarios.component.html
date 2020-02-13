@@ -1,0 +1,25 @@
+<div class="col-md-6 user-container">
+  <h2 id="tableLabel">Inventarios</h2>
+
+  <p *ngIf="!Inventarios"><em>Loading...</em></p>
+
+  <button [routerLink]='["/NuevaInventario"]' class="btn btn-primary" style="width:150px"> Nueva Inventario</button>
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Inventarios">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Inventario of Inventarios">
+        <td>{{ Inventario.id }}</td>
+        <td>{{ Inventario.nombre }}</td>
+        <td>
+          <button [routerLink]='["/EditarInventario/" + Inventario.id]' class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger" (click)="BorrarInventario(Inventario)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

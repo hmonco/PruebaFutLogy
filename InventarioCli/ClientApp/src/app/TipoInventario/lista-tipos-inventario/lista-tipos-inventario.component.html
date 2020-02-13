@@ -1,0 +1,25 @@
+<div class="col-md-6 user-container">
+  <h2 id="tableLabel">Tipos de Inventario</h2>
+
+  <p *ngIf="!TiposInventario"><em>Loading...</em></p>
+
+  <button [routerLink]='["/NuevoTipoInventario"]' class="btn btn-primary" style="width:150px"> Nuevo Tipo Inventario</button>
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="TiposInventario">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let TipoInventario of TiposInventario">
+        <td>{{ TipoInventario.id }}</td>
+        <td>{{ TipoInventario.nombre }}</td>
+        <td>
+          <button [routerLink]='["/EditarTipoInventario/" + TipoInventario.id]' class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger" (click)="BorrarTipoInventario(TipoInventario)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

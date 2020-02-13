@@ -1,0 +1,39 @@
+<div class="col-md-6 user-container">
+  <h2 id="tableLabel">Inventarios</h2>
+
+  <p *ngIf="!Inventarios"><em>Loading...</em></p>
+
+  <button [routerLink]='["/NuevaInventario"]' class="btn btn-primary" style="width:150px"> Nueva Inventario</button>
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Inventarios">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>TipoInventario</th>
+        <th>Serial</th>
+        <th>ValorCompra</th>
+        <th>FechaCompra</th>
+        <th>EstadoActual</th>
+        <th>PropietarioInventario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inventario of Inventarios">
+        <td>{{ inventario.id }}</td>
+        <td>{{ inventario.nombre }}</td>
+        <td>{{ inventario.descripcion }}</td>
+        <td>{{ inventario.tipoInventario }}</td>
+        <td>{{ inventario.serial }}</td>
+        <td>{{ inventario.valorCompra }}</td>
+        <td>{{ inventario.fechaCompra }}</td>
+        <td>{{ inventario.estadoActual }}</td>
+        <td>{{ inventario.propietarioInventario }}</td>
+        <td>
+          <button [routerLink]='["/EditarInventario/" + inventario.id]' class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger" (click)="BorrarInventario(inventario)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

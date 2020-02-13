@@ -1,0 +1,25 @@
+<div class="col-md-6 user-container">
+  <h2 id="tableLabel">Areas</h2>
+
+  <p *ngIf="!Areas"><em>Loading...</em></p>
+
+  <button [routerLink]='["/NuevaArea"]' class="btn btn-danger" style="width:150px"> Nueva Area</button>
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Areas">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let area of Areas">
+        <td>{{ area.id }}</td>
+        <td>{{ area.nombre }}</td>
+        <td>
+          <button [routerLink]='["/EditarArea/" + area.id]' class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger" (click)="BorrarArea(empresa)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

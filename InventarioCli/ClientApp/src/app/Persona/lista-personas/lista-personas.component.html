@@ -1,0 +1,25 @@
+<div class="col-md-6 user-container">
+  <h2 id="tableLabel">Personas</h2>
+
+  <p *ngIf="!Personas"><em>Loading...</em></p>
+
+  <button [routerLink]='["/NuevaPersona"]' class="btn btn-danger" style="width:150px"> Nueva Persona</button>
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Personas">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Persona of Personas">
+        <td>{{ Persona.id }}</td>
+        <td>{{ Persona.nombre }}</td>
+        <td>
+          <button [routerLink]='["/EditarPersona/" + Persona.id]' class="btn btn-primary">Editar</button>
+          <button class="btn btn-danger" (click)="BorrarPersona(empresa)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
